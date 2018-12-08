@@ -138,7 +138,7 @@ def sendMail(MSG):
     
     FROM    = config["email"]["from"]
     TO      = config["email"]["to"]
-    SUBJECT = "FruityWiFi ALERT: DetectRogue"
+    SUBJECT = "BlackBlulb ALERT: DetectRogue"
     TEXT    = MSG
     SERVER  = config["email"]["server"]
     PORT    = config["email"]["port"]

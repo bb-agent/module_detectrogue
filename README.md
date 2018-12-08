@@ -1,7 +1,7 @@
 module_detectrogue
 ==============
 
-FruityWiFi detectrogue module
+BlackBlulb detectrogue module
 
 
 v1.2
@@ -16,6 +16,6 @@ v1.1
 
 v1.0
 ---------------------------------
-- FruityWiFi v2.4 is required
+- BlackBlulb v2.4 is required
 - python-scapy is required
 
