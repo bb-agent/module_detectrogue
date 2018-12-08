@@ -25,9 +25,9 @@ class WebServiceExtendedPlus extends WebServiceExtended {
 		//include "functions.php";
 		
 		//$exec = "python scan-recon.py -i mon0 ";
-		//$out = exec_fruitywifi($exec);
+		//$out = exec_blackbulb($exec);
 				
-		$data = open_file("/usr/share/fruitywifi/logs/detectrogue.log");
+		$data = open_file("/usr/share/blackbulb/logs/detectrogue.log");
 		$out = explode("\n", $data);
 		
 		$output = [];
@@ -51,7 +51,7 @@ class WebServiceExtendedPlus extends WebServiceExtended {
 	// POOL BSSID
 	public function getPoolBSSID()
 	{
-		$data = open_file("/usr/share/fruitywifi/www/modules/detectrogue/includes/list.conf");
+		$data = open_file("/usr/share/blackbulb/www/modules/detectrogue/includes/list.conf");
 		$out = explode("\n", $data);
 		
 		$output = [];
@@ -67,10 +67,10 @@ class WebServiceExtendedPlus extends WebServiceExtended {
 	{
 		include "functions.php";
 		
-		$file = "/usr/share/fruitywifi/www/modules/detectrogue/includes/list.conf";
+		$file = "/usr/share/blackbulb/www/modules/detectrogue/includes/list.conf";
 		
 		$exec = "echo '".$value."' >> $file";
-		$out = exec_fruitywifi($exec);
+		$out = exec_blackbulb($exec);
 		
 		echo json_encode($value);
 	}
@@ -79,10 +79,10 @@ class WebServiceExtendedPlus extends WebServiceExtended {
 	{
 		include "functions.php";
 		
-		$file = "/usr/share/fruitywifi/www/modules/detectrogue/includes/list.conf";
+		$file = "/usr/share/blackbulb/www/modules/detectrogue/includes/list.conf";
 		
 		$exec = "sed -i '/".$value."/d' $file";
-		$out = exec_fruitywifi($exec);
+		$out = exec_blackbulb($exec);
 		
 		echo json_encode($value);
 	}
